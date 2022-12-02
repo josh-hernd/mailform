@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --page-padding: 40px 60px;
+
+    @media (max-width: 950px) {
+        --page-padding: 40px 30px;
+    }
+}
+
+body {
+    font-family: 'Heebo', sans-serif, -apple-system, BlinkMacSystemFont;
+    color: #f4f4f4;
+    background: #272727;
+}
+h1 {
+    font-weight: 900;
+}
+p {
+    font-weight: 400;
+}
+.error {
+    color: #d54141;
+}
+.success {
+    color: rgb(255, 255, 255);
+}
+form {
+    width: clamp((300px - 80px), 100%, (1000px - 80px));
+    padding: 40px;
+    margin: 30px auto 0px;
+    background: rgb(126, 126, 126);
+    border-radius: 6px;
+    @media (max-width: 950px) {
+        padding: 12px;
+    }
+}
+
+.field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+    label {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #fff;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        pointer-events: none;
+    }
+    input,
+    textarea {
+        color: #fff;
+        font-weight: 500;
+        padding: 30px 10px 10px;
+        background-color: #000;
+        border: 0;
+        border-radius: 6px;
+    }
+
+    button {
+        color: #fff;
+        padding: 10px;
+        background: #000;
+        border-radius: 6px;
+        &:disabled {
+            background: rgba(0, 0, 0, 0.4);
+        }
+    }
+}
+input:-webkit-autofill {
+    color: #fff !important;
+    font-weight: 500;
+    padding: 30px 10px 10px;
+    background-image: unset!important;
+    background-color: #000 !important;
+    appearance: none;
+    border: 0;
+  }
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0 50px rgb(0, 0, 0) inset;
+    -webkit-box-shadow:0 0 0 50px rgb(0, 0, 0) inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: rgb(255, 255, 255);
+}
+
+input:-webkit-autofill:focus {
+    box-shadow: 0 0 0 50px rgb(0, 0, 0) inset;
+    -webkit-box-shadow: 0 0 0 50px rgb(0, 0, 0) inset;/*your box-shadow*/
+    -webkit-text-fill-color: rgb(255, 255, 255);
+} 
